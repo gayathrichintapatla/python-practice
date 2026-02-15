@@ -111,7 +111,7 @@ while True:
     time = float(input("Enter Tenure : "))
     if(prin<=0):
         print("Not a Valid Tenure")
-#     else:
-#         break
-# total = prin*pow((1+rate/100),time)
-# print(f"Balance after {time} years : ${total:.2f}")
+    else:
+        break
+total = prin*pow((1+rate/100),time)
+print(f"Balance after {time} years : ${total:.2f}")
