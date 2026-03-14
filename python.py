@@ -107,10 +107,6 @@
 #     else:
 #         break
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a448e3c8f5750efb4fae076a0f9a0445652a141c
 # while True:
 #     time = float(input("Enter Tenure : "))
 #     if(prin<=0):
@@ -119,8 +115,6 @@
 #         break
 # total = prin*pow((1+rate/100),time)
 # print(f"Balance after {time} years : ${total:.2f}")
-<<<<<<< HEAD
-
 # Smart Calculator
 # a,b,op = input("Enter 2 numbers and an operator :").split()
 # a = int(a)
@@ -144,38 +138,167 @@
 #     print(f"{op} is Invalid Operator ")
 
 # Temperature Converter
-temp = float(input("Enter Temp : "))
-unit = input("Enter Unit(C/F) : ").upper()
-if unit=='C':
-    temp = (9*temp)/5+32
-    print(f"The temp in Fahrenheit is {temp:.3f}F")
-    if(temp>100):
-        print("Too Hot")
-    elif(temp<32):
-        print("Freezing")
-    else:
-        print("Normal")
+# temp = float(input("Enter Temp : "))
+# unit = input("Enter Unit(C/F) : ").upper()
+# if unit=='C':
+#     temp = (9*temp)/5+32
+#     print(f"The temp in Fahrenheit is {temp:.3f}F")
+#     if(temp>100):
+#         print("Too Hot")
+#     elif(temp<32):
+#         print("Freezing")
+#     else:
+#         print("Normal")
     
-elif unit=='F':
-    temp = (temp-32)*5/9
-    print(f"The temp in Celsius is {temp:.3f}C")
-    if(temp>37):
-        print("Too Hot")
-    elif(temp<0):
-        print("Freezing")
-    else:
-        print("Normal")
-else:
-    print("The {unit} is NOT valid")
-=======
-while True:
-    time = float(input("Enter Tenure : "))
-    if(prin<=0):
-        print("Not a Valid Tenure")
-    else:
-        break
-total = prin*pow((1+rate/100),time)
-print(f"Balance after {time} years : ${total:.2f}")
->>>>>>> e6ca14df349c344ca1a3bba6fdaaf90bde310155
-=======
->>>>>>> a448e3c8f5750efb4fae076a0f9a0445652a141c
+# elif unit=='F':
+#     temp = (temp-32)*5/9
+#     print(f"The temp in Celsius is {temp:.3f}C")
+#     if(temp>37):
+#         print("Too Hot")
+#     elif(temp<0):
+#         print("Freezing")
+#     else:
+#         print("Normal")
+# else:
+#     print("The {unit} is NOT valid")
+
+
+# STRINGS & LOOPS
+
+# sen = input("Enter a String : ")
+# words = sen.split(" ")
+# vc = 0
+# cc = 0
+# digc = 0
+
+# for word in words:
+#     for i in range(len(word)):
+#         if word[i] in "aeiouAEIOU":
+#             vc += 1
+#         elif word[i].isdigit():
+#             digc += 1
+#         else:
+#             cc += 1
+# print("Vowels :",vc)
+# print("Consonents:",cc)
+# print("Digits:",digc) 
+# print("Spaces",len(words)-1)   
+
+# S = input("Enter a String : ")
+# res = ""
+# for i in range(len(S)):
+#     res = S[i]+res
+# print(res)
+
+# S = input("Enter a string :")
+# unique = ""
+# for ch in S:
+#     if ch not in unique:
+#         unique+=ch
+# print(unique)
+
+# Sen = input("Enter a Sentence : ")
+# words = Sen.split()
+# longest = max(words,key=len)
+# print(longest,end="")
+# print("(",len(longest),")")
+
+# Password Validator
+
+# while True:
+#     password = input("Enter Password : ")
+#     if len(password)<8:
+#         print("Password should be atleast * characters")
+#     else:
+#         break
+
+# Palindrome
+
+# num = int(input("Enter a number : "))
+# og = num
+# rev=0
+# while num>0:
+#     dig = num%10
+#     rev = rev*10+dig
+#     num//=10
+# if rev==og:
+#     print("Palindrome")
+# else:
+#     print("Not a Palindrome")
+
+# PATTERN
+# n = int(input("Enter number of rows : "))
+# for i in range(1,n+1):
+#     for j in range(i):
+#         print("*",end="")
+#     print()
+
+# n = int(input("Enter number of rows : "))
+# for i in range(n,0,-1):
+#     for j in range(i):
+#         print("*",end="")
+#     print()
+
+# n = int(input("Enter number of rows : "))
+# for i in range(n):
+#     for j in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(2*i+1):
+#         print("*",end="")
+#     print()
+
+# DIAMOND PATTERN
+# n = int(input("Enter number of rows : "))
+# for i in range(n):
+#     for j in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(2*i+1):
+#         print("*",end="")
+#     print()
+# for i in range(n-2,-1,-1):
+#     for j in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(2*i+1):
+#         print("*",end="")
+#     print()
+
+# HALLOW PYRAMID
+# n = int(input("Enter number of rows : "))
+# for i in range(n):
+#     for j in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(2*i+1):
+#         if j==0 or j==2*i or i==n-1:
+#             print("*",end="")
+#         else:
+#             print(" ",end="")
+#     print()
+
+# PASCALS TRIANGLE
+# n = int(input("Enter a number : "))
+# for i in range(n):
+#     num=1
+#     for j in range(n-i-1):
+#         print(" ",end="")
+#     for j in range(i+1):
+#         print(num,end=" ")
+#         num = num * (i-j)//(j+1)
+#     print()
+
+# BUTTERFLY PATTERN
+# n = int(input("Enter n :"))
+# for i in range(1,n+1):
+#     print("*"*i+" "*(2*(n-i))+"*"*i)
+# for i in range(n-1,0,-1):
+#     print("*"*i+" "*(2*(n-i))+"*"*i)
+
+# Number palindrome pyramid
+n = int(input("Enter n : "))
+for i in range(1,n+1):
+    for j in range(n-i):
+        print(" ",end="")
+    for j in range(1,i+1):
+        print(j,end=" ")
+    for j in range(i-1,0,-1):
+        print(j,end=" ")
+    print()
