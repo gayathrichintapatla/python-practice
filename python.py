@@ -107,65 +107,6 @@
 #     else:
 #         break
 
-<<<<<<< HEAD
-=======
-# # while True:
-# #     time = float(input("Enter Tenure : "))
-# #     if(prin<=0):
-# #         print("Not a Valid Tenure")
-# #     else:
-# #         break
-# # total = prin*pow((1+rate/100),time)
-# # print(f"Balance after {time} years : ${total:.2f}")
-
-
-# # Smart Calculator
-# # a,b,op = input("Enter 2 numbers and an operator :").split()
-# # a = int(a)
-# # b = int(b)
-# # if op=='+':
-# #     print("Sum is :",a+b)
-# # elif op=='-':
-# #     print("Diff is :",a-b)
-# # elif op=='*':
-# #     print("Mul is :",a*b)
-# # elif op=='/':
-# #     if b==0 and op=='/':
-# #         print("Cannot divide by zero")  
-# #     else:    
-# #         print("Div is :",a/b)
-# # elif op=='%':
-# #     print("Modulo is :",a%b)
-# # elif op=='//':
-# #     print("Div is :",a//b)
-# # else:
-# #     print(f"{op} is Invalid Operator ")
-
-# # Temperature Converter
-# temp = float(input("Enter Temp : "))
-# unit = input("Enter Unit(C/F) : ").upper()
-# if unit=='C':
-#     temp = (9*temp)/5+32
-#     print(f"The temp in Fahrenheit is {temp:.3f}F")
-#     if(temp>100):
-#         print("Too Hot")
-#     elif(temp<32):
-#         print("Freezing")
-#     else:
-#         print("Normal")
-    
-# elif unit=='F':
-#     temp = (temp-32)*5/9
-#     print(f"The temp in Celsius is {temp:.3f}C")
-#     if(temp>37):
-#         print("Too Hot")
-#     elif(temp<0):
-#         print("Freezing")
-#     else:
-#         print("Normal")
-# else:
-#     print("The {unit} is NOT valid")
->>>>>>> 270831531f211316a9bad65b55e6d85fe41090c5
 # while True:
 #     time = float(input("Enter Tenure : "))
 #     if(prin<=0):
@@ -174,7 +115,6 @@
 #         break
 # total = prin*pow((1+rate/100),time)
 # print(f"Balance after {time} years : ${total:.2f}")
-<<<<<<< HEAD
 # Smart Calculator
 # a,b,op = input("Enter 2 numbers and an operator :").split()
 # a = int(a)
@@ -353,15 +293,30 @@
 #     print("*"*i+" "*(2*(n-i))+"*"*i)
 
 # Number palindrome pyramid
-n = int(input("Enter n : "))
-for i in range(1,n+1):
-    for j in range(n-i):
-        print(" ",end="")
-    for j in range(1,i+1):
-        print(j,end=" ")
-    for j in range(i-1,0,-1):
-        print(j,end=" ")
-    print()
-=======
+# n = int(input("Enter n : "))
+# for i in range(1,n+1):
+#     for j in range(n-i):
+#         print(" ",end="")
+#     for j in range(1,i+1):
+#         print(j,end=" ")
+#     for j in range(i-1,0,-1):
+#         print(j,end=" ")
+#     print()
 
->>>>>>> 270831531f211316a9bad65b55e6d85fe41090c5
+# import streamlit as st
+# st.title("Basic Calculator")
+# num1=st.number_input("Enter first number",value=0,step=1)
+# num2=st.number_input("Enter second number",value=0,step=1)
+# operation=st.selectbox("Select Operation",
+#                        ("Addition","Subtraction","Multiplication","Division"))
+# result=0
+# if st.button("Calculate"):
+#     if operation == "Addition":
+#         result=num1+num2
+#     elif operation=="Subtraction":
+#         result=num1-num2
+#     elif operation=="Multiplication":
+#         result=num1*num2
+#     elif operation=="Division":
+#         result=num1/num2
+#     st.success(f"Result: {result:.2f}")
