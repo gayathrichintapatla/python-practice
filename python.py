@@ -320,3 +320,92 @@
 #     elif operation=="Division":
 #         result=num1/num2
 #     st.success(f"Result: {result:.2f}")
+
+# correct_pin = "777333"
+# attempts = 0
+# while attempts < 3:
+#     pin = input("Enter PIN: ")
+#     if pin == correct_pin:
+#         print("Access granted! Welcome.")
+#         break 
+#     else:
+#         attempts += 1
+#         remaining = 3 - attempts
+#         if remaining > 0:
+#             print(f"Wrong PIN. {remaining} attempts left.")
+#         else:
+#             print("Account blocked after 3 wrong attempts!")
+
+# ----------------NUMBER GUESSING GAME---------------------------------------
+import random
+
+print("="*40)
+print("NUMBER GUESSING GAME")
+print("="*40)
+
+level = input("Enter Difficulty level (easy/hard): ").lower()
+
+if level == "easy":
+    low, high, attempts = 1, 50, 7
+elif level == "hard":
+    low, high, attempts = 1, 100, 5
+else:
+    print("Choose valid level!")
+    exit()
+
+secret = random.randint(low, high)
+
+print(f"\nGuess a number between {low} and {high}")
+print(f"You have {attempts} chances. Good luck!")
+
+chances = 0
+won = False
+
+while chances < attempts:
+
+    try:
+        guess = int(input(f"Attempt {chances+1}/{attempts}: "))
+    except ValueError:
+        print("Numbers only!")
+        continue
+
+    if guess < low or guess > high:
+        print("Guess within the range!")
+        continue
+
+    chances += 1
+    remaining = attempts - chances
+
+    if guess == secret:
+        won = True
+        break
+
+    diff = abs(secret - guess)
+
+    if guess < secret:
+        if diff <= 5:
+            print(f"🔥 Very close! Go higher ({remaining} left)")
+        else:
+            print(f"↑ Too low! Go higher ({remaining} left)")
+    else:
+        if diff <= 5:
+            print(f"🔥 Very close! Go lower ({remaining} left)")
+        else:
+            print(f"↓ Too high! Go lower ({remaining} left)")
+
+print("-"*40)
+
+if won:
+    print(f"Excellent! You guessed {secret} in {chances} tries!")
+
+    if chances <= 3:
+        print("Incredible — under 3 tries!")
+    elif chances <= 5:
+        print("Well done!")
+    else:
+        print("Made it just in time!")
+
+else:
+    print(f"Out of tries! The number was {secret}.")
+
+print("="*40)
