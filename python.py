@@ -482,12 +482,53 @@
 # flatten = [x for row in nested_lst for x in row]
 # print(flatten)
 
-lst = [10,20,30,40,50]
+# lst = [10,20,30,40,50]
 # res = tuple((i,val) for i,val in enumerate(lst))
 # print(res)
 # l = [(i,j) for i in lst for j in lst if i<j]
 # print(l)
-k=3
-rotated = lst[k:]+lst[:k]
-print(rotated)
+# k=3
+# rotated = lst[k:]+lst[:k]
+# print(rotated)
 
+
+# QUIZ GAME
+questions = ("1.What is the powerhouse of the cell?",
+             "2.How many bones does human body consist of?",
+             "3.What is the largest Continent?",                                                                                                                   
+             "4.1km = How many meters?")
+options = (("A.Nucleas","B.Mitochondria","C.Plasma","D.Blood"),
+           ("A.202","B.304","C.206","D.108"),
+           ("A.Asia","B.Africa","C.South America","D.Antartica"),
+           ("A.100","B.1200","C.10","D.1000"))
+ans = ('B','C','A','D')
+question_num=0
+score=0
+guesses=[]
+for q in questions:
+    print('_'*20)
+    print(q)
+    print('-'*20)
+    for o in options[question_num]:
+        print(o)
+    guess = input("Enter Option(A,B,C,D):").upper()
+    guesses.append(guess)
+    
+    if guess==ans[question_num]:
+        score+=1
+        print("CORRECT")
+    else:
+        print("INCORRECT")
+        print(f"{ans[question_num]} is the correct answer")
+    question_num+=1
+
+print("***********RESULTS***********")
+print("answers:",end="")
+for a in ans:
+    print(a,end=" ")
+print("\nguesses:",end="")
+for guess in guesses:
+    print(guess,end=" ")
+
+print(f"\nYou guessed {score} correct")
+print(f"SCORE : {((score)/len(questions))*100}")
