@@ -337,75 +337,157 @@
 #             print("Account blocked after 3 wrong attempts!")
 
 # ----------------NUMBER GUESSING GAME---------------------------------------
-import random
+# import random
 
-print("="*40)
-print("NUMBER GUESSING GAME")
-print("="*40)
+# print("="*40)
+# print("NUMBER GUESSING GAME")
+# print("="*40)
 
-level = input("Enter Difficulty level (easy/hard): ").lower()
+# level = input("Enter Difficulty level (easy/hard): ").lower()
 
-if level == "easy":
-    low, high, attempts = 1, 50, 7
-elif level == "hard":
-    low, high, attempts = 1, 100, 5
-else:
-    print("Choose valid level!")
-    exit()
+# if level == "easy":
+#     low, high, attempts = 1, 50, 7
+# elif level == "hard":
+#     low, high, attempts = 1, 100, 5
+# else:
+#     print("Choose valid level!")
+#     exit()
 
-secret = random.randint(low, high)
+# secret = random.randint(low, high)
 
-print(f"\nGuess a number between {low} and {high}")
-print(f"You have {attempts} chances. Good luck!")
+# print(f"\nGuess a number between {low} and {high}")
+# print(f"You have {attempts} chances. Good luck!")
 
-chances = 0
-won = False
+# chances = 0
+# won = False
 
-while chances < attempts:
+# while chances < attempts:
 
-    try:
-        guess = int(input(f"Attempt {chances+1}/{attempts}: "))
-    except ValueError:
-        print("Numbers only!")
-        continue
+#     try:
+#         guess = int(input(f"Attempt {chances+1}/{attempts}: "))
+#     except ValueError:
+#         print("Numbers only!")
+#         continue
 
-    if guess < low or guess > high:
-        print("Guess within the range!")
-        continue
+#     if guess < low or guess > high:
+#         print("Guess within the range!")
+#         continue
 
-    chances += 1
-    remaining = attempts - chances
+#     chances += 1
+#     remaining = attempts - chances
 
-    if guess == secret:
-        won = True
-        break
+#     if guess == secret:
+#         won = True
+#         break
 
-    diff = abs(secret - guess)
+#     diff = abs(secret - guess)
 
-    if guess < secret:
-        if diff <= 5:
-            print(f"🔥 Very close! Go higher ({remaining} left)")
-        else:
-            print(f"↑ Too low! Go higher ({remaining} left)")
-    else:
-        if diff <= 5:
-            print(f"🔥 Very close! Go lower ({remaining} left)")
-        else:
-            print(f"↓ Too high! Go lower ({remaining} left)")
+#     if guess < secret:
+#         if diff <= 5:
+#             print(f"🔥 Very close! Go higher ({remaining} left)")
+#         else:
+#             print(f"↑ Too low! Go higher ({remaining} left)")
+#     else:
+#         if diff <= 5:
+#             print(f"🔥 Very close! Go lower ({remaining} left)")
+#         else:
+#             print(f"↓ Too high! Go lower ({remaining} left)")
 
-print("-"*40)
+# print("-"*40)
 
-if won:
-    print(f"Excellent! You guessed {secret} in {chances} tries!")
+# if won:
+#     print(f"Excellent! You guessed {secret} in {chances} tries!")
 
-    if chances <= 3:
-        print("Incredible — under 3 tries!")
-    elif chances <= 5:
-        print("Well done!")
-    else:
-        print("Made it just in time!")
+#     if chances <= 3:
+#         print("Incredible — under 3 tries!")
+#     elif chances <= 5:
+#         print("Well done!")
+#     else:
+#         print("Made it just in time!")
 
-else:
-    print(f"Out of tries! The number was {secret}.")
+# else:
+#     print(f"Out of tries! The number was {secret}.")
 
-print("="*40)
+# print("="*40)
+
+# Collections
+
+# lst = [x**2 for x in range(1,21)]
+# print(lst)
+# lst.reverse()
+# print(lst)
+# print(lst[::-1])
+# print(max(lst))
+# print(min(lst))
+# print(lst.count(7))
+
+# t = tuple(lst)
+# print(t)
+# print(t[-1])
+# for i in t:
+#     print(t.count(i),end=" ")
+# print(t.index(64))
+
+# l = [1,4,3,7,8,3,7,2,1,1,9,9,5,4,4]
+# s = set(l)
+# print(s)
+# s.add(6)
+# print(s)
+# s.remove(10)#returns error
+# print(s)
+# s.discard(10)
+# print(s)
+# p=s.pop()
+# print(p)
+# print(s)
+
+# s1={4,6,7,9,1,2}
+# s2={1,2,8,9,0,4}
+# print(s1|s2)
+# print(s1&s2)
+# print(s1-s2)
+# print(s1^s2)
+# print(5 in s1)
+
+# d = {x:x*x for x in range(1,11)}
+# print(d.get(4))
+# print(list(d.keys()))
+# print(d.values())
+# d[3]=24
+# print(d[3])
+# k=d.pop(2)
+# print(k)
+# for k,v in d.items():
+#     print(f"{k} : {v}")
+
+# even = [x for x in range(1,51) if x%2==0]
+# print(even)
+# str = "Aeiou rstuiae"
+# s = {ch for ch in str if ch.lower() in "aeiou"}
+# print(s)
+# d = {x:x**3 for x in range(1,11)}
+# print(d)
+# s = tuple(x**2 for x in range(1,11))
+# print(type(s))
+
+# l = list(map(int,input().split(" ")))
+# pos = [x for x in l if x>0]
+# print(pos)
+# l.sort(reverse=True)
+# print(l[1])
+# m = [5,4,3,2,1]
+# l.extend(m)
+# print(list(set(l)))
+# nested_lst = [[1,2,3],[4,5,6],[7,8,9]]
+# flatten = [x for row in nested_lst for x in row]
+# print(flatten)
+
+lst = [10,20,30,40,50]
+# res = tuple((i,val) for i,val in enumerate(lst))
+# print(res)
+# l = [(i,j) for i in lst for j in lst if i<j]
+# print(l)
+k=3
+rotated = lst[k:]+lst[:k]
+print(rotated)
+
